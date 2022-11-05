@@ -5,6 +5,9 @@ This Orchid Snippets extensions will help you to create in the fastest way Orchi
 ## Features
 
 This package contains snippets for below Orchid components:
+
+- $allowedFilters array
+- $allowedSorts array
 - Route::screen
 - Input::make
 - TextArea::make
@@ -31,3 +34,4 @@ This package contains snippets for below Orchid components:
 - Toast::message
 - TD::make
 - ModalToggle::make
+- Route::crud is a custom snippet to create two base routes for an Orchid Crud, (the url of ListScreen should be in plural to avoid Orchid error).

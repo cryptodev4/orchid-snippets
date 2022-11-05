@@ -1,9 +1,38 @@
 {
+    "allowedFilters.sublime-snippet": {
+        "prefix": "$allowedFilters",
+        "body": [
+            "protected $allowedFilters = [",
+            "   '${1:custom-field}'",
+            "];"
+        ],
+        "description": "Creates allowed filters array"
+    },
+    "allowedSorts.sublime-snippet": {
+        "prefix": "$allowedSorts",
+        "body": [
+            "protected $allowedSorts = [",
+            "   '${1:custom-field}'",
+            "];"
+        ],
+        "description": "Creates allowed sorts array"
+    },
+    "Route-crud.sublime-snippet": {
+        "prefix": "Route::crud",
+        "body": [
+            "Route::screen('${1:module}/{${1:module}?}', ${2:EditScreen::class})",
+            "   ->name('platform.${1:module}.edit');",
+            "",
+            "Route::screen('${1:module}', ${3:ListScreen::class})",
+            "   ->name('platform.${1:module}.list');",
+        ],
+        "description": "Creates default crud Route screens"
+    },
     "Route-screen.sublime-snippet": {
         "prefix": "Route::screen",
         "body": [
             "Route::screen('${1:screen-route}', ${2:ScreenClass::class})",
-            "   ->name('${3:route-name}');"
+            "   ->name('${3:route.name}');"
         ],
         "description": "Creates a new Route screen"
     },
@@ -132,7 +161,7 @@
         "prefix": "Group::make",
         "body": [
             "Group::make([",
-            "   $2",
+            "   $1",
             "]);"
         ],
         "description": "Creates a new Group field"
@@ -178,7 +207,7 @@
             "   ->title('${2:menu-title}')",
             "   ->route('${3:menu-route}')",
             "   ->icon('${4:menu-icon}')",
-            "   ->permission('${5:menu-permission}'),",
+            "   ->permission('${5:menu.permission}'),",
         ],
         "description": "Creates a new Menu field"
     },
