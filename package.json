@@ -2,6 +2,9 @@
   "name": "orchid-snippets",
   "displayName": "Orchid Snippets",
   "description": "",
+  "repository": {
+    "url": "https://github.com/cryptodev4/orchid-snippets"
+  },
   "version": "1.0.1",
   "engines": {
     "vscode": "^1.73.0"
