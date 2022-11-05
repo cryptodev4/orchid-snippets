@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "DEVSENSE.composer-php-vscode",
+        "DEVSENSE.phptools-vscode",
+        "xdebug.php-debug",
+        "xdebug.php-pack",
+        "MehediDracula.php-namespace-resolver",
+        "jasonlhy.hungry-delete",
+        "onecentlin.php-productive-pack",
+        "DEVSENSE.profiler-php-vscode",
+        "onecentlin.phpunit-snippets",
+        "bmewburn.vscode-intelephense-client",
+    ]
+}

@@ -1,0 +1,216 @@
+{
+    "Route-screen.sublime-snippet": {
+        "prefix": "Route::screen",
+        "body": [
+            "Route::screen('${1:screen-route}', ${2:ScreenClass::class})",
+            "   ->name('${3:route-name}');"
+        ],
+        "description": "Creates a new Route screen"
+    },
+    "Input-field.sublime-snippet": {
+        "prefix": "Input::make",
+        "body": [
+            "Input::make('${1:input-name}')",
+            "   ->type(__('${2:input-type}'))",
+            "   ->title(__('${3:input-title}'));",
+        ],
+        "description": "Create a new Input field"
+    },
+    "TextArea-field.sublime-snippet": {
+        "prefix": "TextArea::make",
+        "body": [
+            "TextArea::make('${1:input-name}')",
+            "   ->rows(__('${2:input-type}'));",
+        ],
+        "description": "Creates a new TextArea field"
+    },
+    "CheckBox-field.sublime-snippet": {
+        "prefix": "CheckBox::make",
+        "body": [
+            "CheckBox::make('${1:checkbox-name}')",
+            "   ->value(__('${2:checkbox-value}'))",
+            "   ->title(__('${2:checkbox-title}'))",
+            "   ->placeholder(__('${2:checkbox-placeholder}'));",
+        ],
+        "description": "Creates a new CheckBox field"
+    },
+    "Select-field.sublime-snippet": {
+        "prefix": "Select::make",
+        "body": [
+            "Select::make('${1:select-name}')",
+            "   ->fromModel(${2:select-model}, '${3:model-field}')",
+            "   ->title('${4:select-title}');",
+        ],
+        "description": "Creates a new Select field"
+    },
+    "Relation-field.sublime-snippet": {
+        "prefix": "Relation::make",
+        "body": [
+            "Relation::make('${1:select-name}')",
+            "   ->fromModel(${2:select-model}, '${3:model-field}')",
+            "   ->title('${4:select-title}');",
+        ],
+        "description": "Creates a new Relation field"
+    },
+    "DateTimer-field.sublime-snippet": {
+        "prefix": "DateTimer::make",
+        "body": [
+            "DateTimer::make('${1:datetimer-name}')",
+            "   ->title('${2:datetimer-title}');",
+        ],
+        "description": "Creates a new DateTimer field"
+    },
+    "DateRange-field.sublime-snippet": {
+        "prefix": "DateRange::make",
+        "body": [
+            "DateRange::make('${1:daterange-name}')",
+            "   ->title('${2:daterange-title}');",
+        ],
+        "description": "Creates a new DateRange field"
+    },
+    "TimeZone-field.sublime-snippet": {
+        "prefix": "TimeZone::make",
+        "body": [
+            "TimeZone::make('${1:timezone-name}')",
+            "   ->listIdentifiers('${2:timezone-identifiers}');",
+        ],
+        "description": "Creates a new TimeZone field"
+    },
+    "Quill-field.sublime-snippet": {
+        "prefix": "Quill::make",
+        "body": [
+            "Quill::make('${1:quill-name}')",
+            "   ->toolbar(['text', 'color', 'header', 'list', 'format', 'media']);"
+        ],
+        "description": "Creates a new Quill editor field"
+    },
+    "SimpleMDE-field.sublime-snippet": {
+        "prefix": "SimpleMDE::make",
+        "body": [
+            "SimpleMDE::make('${1:simplemde-name}');"
+        ],
+        "description": "Creates a new SimpleMDE field"
+    },
+    "Matrix-field.sublime-snippet": {
+        "prefix": "Matrix::make",
+        "body": [
+            "Matrix::make('${1:matrix-name}')",
+            "   ->title('${2:matrix-title}')",
+            "   ->columns(['${3:matrix-column}']);",
+        ],
+        "description": "Creates a new Matrix field"
+    },
+    "Code-field.sublime-snippet": {
+        "prefix": "Code::make",
+        "body": [
+            "Code::make('${1:code-name}');",
+        ],
+        "description": "Creates a new Code field"
+    },
+    "Picture-field.sublime-snippet": {
+        "prefix": "Picture::make",
+        "body": [
+            "Picture::make('${1:picture-name}');"
+        ],
+        "description": "Creates a new Picture field"
+    },
+    "Cropper-field.sublime-snippet": {
+        "prefix": "Cropper::make",
+        "body": [
+            "Cropper::make('${1:cropper-name}');"
+        ],
+        "description": "Creates a new Cropper field"
+    },
+    "Upload-field.sublime-snippet": {
+        "prefix": "Upload::make",
+        "body": [
+            "Upload::make('${1:upload-name}');"
+        ],
+        "description": "Creates a new Upload field"
+    },
+    "Group-field.sublime-snippet": {
+        "prefix": "Group::make",
+        "body": [
+            "Group::make([",
+            "   $2",
+            "]);"
+        ],
+        "description": "Creates a new Group field"
+    },
+    "Button-field.sublime-snippet": {
+        "prefix": "Button::make",
+        "body": [
+            "Button::make('__(${1:button-title})')",
+            "   ->method('${2:button-method}');"
+        ],
+        "description": "Creates a new Button field"
+    },
+    "Link-field.sublime-snippet": {
+        "prefix": "Link::make",
+        "body": [
+            "Link::make('__(${1:link-title})')",
+            "   ->route('${2:link-route}');"
+        ],
+        "description": "Creates a new Link field"
+    },
+    "DropDown-field.sublime-snippet": {
+        "prefix": "DropDown::make",
+        "body": [
+            "DropDown::make()",
+            "   ->icon('${1:dropdown-icon}')",
+            "   ->list([",
+            "       $2",
+            "   ]);"
+        ],
+        "description": "Creates a new DropDown field"
+    },
+    "NumberRange-field.sublime-snippet": {
+        "prefix": "NumberRange::make",
+        "body": [
+            "NumberRange::make();"
+        ],
+        "description": "Creates a new NumberRange field"
+    },
+    "Menu-field.sublime-snippet": {
+        "prefix": "Menu::make",
+        "body": [
+            "Menu::make('${1:menu-name}')",
+            "   ->title('${2:menu-title}')",
+            "   ->route('${3:menu-route}')",
+            "   ->icon('${4:menu-icon}')",
+            "   ->permission('${5:menu-permission}'),",
+        ],
+        "description": "Creates a new Menu field"
+    },
+    "Alert-notification.sublime-snippet": {
+        "prefix": "Alert::message",
+        "body": [
+            "Alert::message('${1:alert-message}'); // available styles: info, success, error, warning"
+        ],
+        "description": "Creates a new Alert nofitification"
+    },
+    "Toast-notification.sublime-snippet": {
+        "prefix": "Toast::message",
+        "body": [
+            "Toast::message('${1:toast-message}'); // available styles: info, success, error, warning"
+        ],
+        "description": "Creates a new Toast nofitification"
+    },
+    "TD-component.sublime-snippet": {
+        "prefix": "TD::make",
+        "body": [
+            "TD::make('${1:model-field}', __('${2:table-title}')),"
+        ],
+        "description": "Creates a new TD component"
+    },
+    "ModalToggle-component.sublime-snippet": {
+        "prefix": "ModalToggle::make",
+        "body": [
+            "ModalToggle::make(__('${1:modal-title}'))",
+            "   ->modal('${2:modal-id}')",
+            "   ->method('${3:modal-method}')",
+            "   ->icon('${4:modal-icon}')"
+        ],
+        "description": "Creates a new ModalToggle component"
+    }
+}
