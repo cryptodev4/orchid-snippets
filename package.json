@@ -1,8 +1,8 @@
 {
   "name": "orchid-snippets",
-  "displayName": "orchid-snippets",
+  "displayName": "Orchid Snippets",
   "description": "",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.73.0"
   },
