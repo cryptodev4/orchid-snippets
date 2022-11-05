@@ -3,10 +3,11 @@
     "displayName": "Orchid Snippets",
     "description": "",
     "publisher": "cryptodev369",
+    "icon": "orchid.png",
     "repository": {
         "url": "https://github.com/cryptodev4/orchid-snippets"
     },
-    "version": "1.0.1",
+    "version": "1.0.2",
     "engines": {
         "vscode": "^1.73.0"
     },
