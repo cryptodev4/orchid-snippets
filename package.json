@@ -1,13 +1,13 @@
 {
     "name": "orchid-snippets",
     "displayName": "Orchid Snippets",
-    "description": "",
+    "description": "This is Orchid Snippets to accelerate Laravel Orchid development",
     "publisher": "cryptodev369",
     "icon": "orchid.png",
     "repository": {
         "url": "https://github.com/cryptodev4/orchid-snippets"
     },
-    "version": "1.0.4",
+    "version": "1.0.5",
     "engines": {
         "vscode": "^1.71.2"
     },
