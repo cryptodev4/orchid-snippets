@@ -7,9 +7,9 @@
     "repository": {
         "url": "https://github.com/cryptodev4/orchid-snippets"
     },
-    "version": "1.0.3",
+    "version": "1.0.4",
     "engines": {
-        "vscode": "^0.10.5"
+        "vscode": "^1.71"
     },
     "categories": [
         "Snippets"
