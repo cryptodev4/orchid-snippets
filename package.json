@@ -9,7 +9,7 @@
     },
     "version": "1.0.4",
     "engines": {
-        "vscode": "^1.71"
+        "vscode": "^1.71.2"
     },
     "categories": [
         "Snippets"
