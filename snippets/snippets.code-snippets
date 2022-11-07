@@ -3,7 +3,7 @@
         "prefix": "$allowedFilters",
         "body": [
             "protected $allowedFilters = [",
-            "   '${1:custom-field}'",
+            "    '${1:field}'",
             "];"
         ],
         "description": "Creates allowed filters array"
@@ -12,7 +12,7 @@
         "prefix": "$allowedSorts",
         "body": [
             "protected $allowedSorts = [",
-            "   '${1:custom-field}'",
+            "    '${1:field}'",
             "];"
         ],
         "description": "Creates allowed sorts array"
@@ -20,140 +20,152 @@
     "Route-crud.sublime-snippet": {
         "prefix": "Route::crud",
         "body": [
-            "Route::screen('${1:module}/{${1:module}?}', ${2:EditScreen::class})",
-            "   ->name('platform.${1:module}.edit');",
+            "Route::screen('${1:module}/{${1:module}?}', ${2:ScreenClass::class})",
+            "    ->name('platform.${1:module}.edit');",
             "",
-            "Route::screen('${1:module}', ${3:ListScreen::class})",
-            "   ->name('platform.${1:module}.list');",
+            "Route::screen('${1:module}', ${3:ScreenClass::class})",
+            "    ->name('platform.${1:module}.list');",
         ],
         "description": "Creates default crud Route screens"
     },
     "Route-screen.sublime-snippet": {
         "prefix": "Route::screen",
         "body": [
-            "Route::screen('${1:screen-route}', ${2:ScreenClass::class})",
-            "   ->name('${3:route.name}');"
+            "Route::screen('${1:url}', ${2:ScreenClass::class})",
+            "    ->name('${3:name}');"
         ],
         "description": "Creates a new Route screen"
     },
     "Input-field.sublime-snippet": {
         "prefix": "Input::make",
         "body": [
-            "Input::make('${1:input-name}')",
-            "   ->type(__('${2:input-type}'))",
-            "   ->title(__('${3:input-title}'));",
+            "Input::make('${1:name}')",
+            "    ->type('${2|text,file,hidden,color,email,number,range,url|}')",
+            "    ->title(__('${3:title}'))",
+            "    ->help(__('${4:help}'))",
+            "    ->popover(__('${5:popover}')),",
         ],
         "description": "Create a new Input field"
     },
     "TextArea-field.sublime-snippet": {
         "prefix": "TextArea::make",
         "body": [
-            "TextArea::make('${1:input-name}')",
-            "   ->rows(__('${2:input-type}'));",
+            "TextArea::make('${1:name}')",
+            "    ->rows('${2:number}'),",
         ],
         "description": "Creates a new TextArea field"
     },
     "CheckBox-field.sublime-snippet": {
         "prefix": "CheckBox::make",
         "body": [
-            "CheckBox::make('${1:checkbox-name}')",
-            "   ->value(__('${2:checkbox-value}'))",
-            "   ->title(__('${2:checkbox-title}'))",
-            "   ->placeholder(__('${2:checkbox-placeholder}'));",
+            "CheckBox::make('${1:name}')",
+            "    ->value('${2:value}')",
+            "    ->title(__('${3:title}'))",
+            "    ->placeholder(__('${4:placeholder}'))",
+            "    ->help(__('${5:help}')),",
         ],
         "description": "Creates a new CheckBox field"
     },
     "Select-field.sublime-snippet": {
         "prefix": "Select::make",
         "body": [
-            "Select::make('${1:select-name}')",
-            "   ->fromModel(${2:select-model}, '${3:model-field}')",
-            "   ->title('${4:select-title}');",
+            "Select::make('${1:name}')",
+            "    ->${2|fromModel,fromQuery,options|}(${3})",
+            "    ->title(__('${4:title}'))",
+            "    ->help(__('${5:help}'))",
+            "    ->empty(__('${6:empty}')),",
         ],
         "description": "Creates a new Select field"
     },
     "Relation-field.sublime-snippet": {
         "prefix": "Relation::make",
         "body": [
-            "Relation::make('${1:select-name}')",
-            "   ->fromModel(${2:select-model}, '${3:model-field}')",
-            "   ->title('${4:select-title}');",
+            "Relation::make('${1:name}')",
+            "    ->${2|fromModel,fromQuery,options|}(${3})",
+            "    ->title(__('${4:title}'))",
+            "    ->help(__('${5:help}'))",
+            "    ->empty(__('${6:empty}')),",
         ],
         "description": "Creates a new Relation field"
     },
     "DateTimer-field.sublime-snippet": {
         "prefix": "DateTimer::make",
         "body": [
-            "DateTimer::make('${1:datetimer-name}')",
-            "   ->title('${2:datetimer-title}');",
+            "DateTimer::make('${1:name}')",
+            "    ->title(__('${2:title}')),",
         ],
         "description": "Creates a new DateTimer field"
     },
     "DateRange-field.sublime-snippet": {
         "prefix": "DateRange::make",
         "body": [
-            "DateRange::make('${1:daterange-name}')",
-            "   ->title('${2:daterange-title}');",
+            "DateRange::make('${1:name}')",
+            "    ->title(__('${2:title}')),",
         ],
         "description": "Creates a new DateRange field"
     },
     "TimeZone-field.sublime-snippet": {
         "prefix": "TimeZone::make",
         "body": [
-            "TimeZone::make('${1:timezone-name}')",
-            "   ->listIdentifiers('${2:timezone-identifiers}');",
+            "TimeZone::make('${1:name}')",
+            "    ->listIdentifiers('${2:identifiers}'),",
         ],
         "description": "Creates a new TimeZone field"
     },
     "Quill-field.sublime-snippet": {
         "prefix": "Quill::make",
         "body": [
-            "Quill::make('${1:quill-name}')",
-            "   ->toolbar(['text', 'color', 'header', 'list', 'format', 'media']);"
+            "Quill::make('${1:name}')",
+            "    ->toolbar(['text', 'color', 'header', 'list', 'format', 'media']),"
         ],
         "description": "Creates a new Quill editor field"
     },
     "SimpleMDE-field.sublime-snippet": {
         "prefix": "SimpleMDE::make",
         "body": [
-            "SimpleMDE::make('${1:simplemde-name}');"
+            "SimpleMDE::make('${1:name}'),"
         ],
         "description": "Creates a new SimpleMDE field"
     },
     "Matrix-field.sublime-snippet": {
         "prefix": "Matrix::make",
         "body": [
-            "Matrix::make('${1:matrix-name}')",
-            "   ->title('${2:matrix-title}')",
-            "   ->columns(['${3:matrix-column}']);",
+            "Matrix::make('${1:name}')",
+            "    ->title(__('${2:title}'))",
+            "    ->columns([",
+            "        ${3}",
+            "    ])",
+            "    ->fields([",
+            "        ${4}",
+            "    ]),",
         ],
         "description": "Creates a new Matrix field"
     },
     "Code-field.sublime-snippet": {
         "prefix": "Code::make",
         "body": [
-            "Code::make('${1:code-name}');",
+            "Code::make('${1:name}'),",
         ],
         "description": "Creates a new Code field"
     },
     "Picture-field.sublime-snippet": {
         "prefix": "Picture::make",
         "body": [
-            "Picture::make('${1:picture-name}');"
+            "Picture::make('${1:name}'),"
         ],
         "description": "Creates a new Picture field"
     },
     "Cropper-field.sublime-snippet": {
         "prefix": "Cropper::make",
         "body": [
-            "Cropper::make('${1:cropper-name}');"
+            "Cropper::make('${1:name}'),"
         ],
         "description": "Creates a new Cropper field"
     },
     "Upload-field.sublime-snippet": {
         "prefix": "Upload::make",
         "body": [
-            "Upload::make('${1:upload-name}');"
+            "Upload::make('${1:name}'),"
         ],
         "description": "Creates a new Upload field"
     },
@@ -161,24 +173,26 @@
         "prefix": "Group::make",
         "body": [
             "Group::make([",
-            "   $1",
-            "]);"
+            "    $1",
+            "]),"
         ],
         "description": "Creates a new Group field"
     },
     "Button-field.sublime-snippet": {
         "prefix": "Button::make",
         "body": [
-            "Button::make('__(${1:button-title})')",
-            "   ->method('${2:button-method}');"
+            "Button::make('__(${1:name})')",
+            "    ->icon('${2|action-redo,action-undo,actual-size,anchor,android,arrow-down-circle,arrow-down,arrow-left-circle,arrow-left,arrow-right-circle,arrow-right,arrow-up-circle,arrow-up,badge,bag,ban,bar-chart,barcode,basket-loaded,basket,bell,bitcoin,bold,book-open,briefcase,browser,brush,bubble,bubbles,bug,building,bulb,calculator-alt,calculator,calendar,call-end,call-in,call-out,camera,camrecorder,chart,check,chemistry,circle,circle_thin,clock,close,cloud-download,cloud-upload,code,compass,config,control-end,control-forward,control-pause,control-play,control-rewind,control-start,controller,copyright,credit-card,crome,crop,cross,cup,cursor-move,cursor,cut,database,diamond,direction,directions,disc,dislike,doc,docs,dollar,drawer,dribbble,drop,dropbox,earphones-alt,earphones,edge,emotsmile,energy,envelope-letter,envelope-open,envelope,equalizer,euro,event,exclamation,eye,eyeglasses,facebook,feed,female-user,film,filter,fingerprint,fire,firefox,flag,folder-alt,folder,font,frame,friends,full-screen,game-controller,ghost,globe-alt,globe,graduation,graph,grid,handbag,headphones-microphone,headphones,heart,help,history,home,hourglass,ie,info,italic,key,layers,left,like,link,linux,lira,list,loading,location-pin,lock-open,lock,login,logout,loop,mac,macos,magic-wand,magnet,magnifier-add,magnifier-remove,magnifier,map,menu,microphone,minus,module,modules,money,monitor,mouse,moustache,move,music-tone-alt,music-tone,mustache,new-doc,note,notebook,number-list,open,options-vertical,options,orchid-old,orchid,organization,os,paper-clip,paper-plane,paste,paypal,pencil,people,phone,photo,picture,pie-chart,pin,plane,playlist,plus-alt,plus,pointer,pound,power,present,printer,puzzle,question,quote,refresh,reload,right,rocket,rub,rupee,safari,save-alt,save,screen-desktop,screen-smartphone,screen-tablet,server,settings,share-alt,share,shekel,shield,shuffle,size-actual,size-fullscreen,social-behance,social-dribbble,social-dropbox,social-facebook,social-foursqare,social-github,social-google,social-instagram,social-linkedin,social-pintarest,social-reddit,social-skype,social-soundcloud,social-spotify,social-steam,social-stumbleupon,social-tumblr,social-twitter,social-vkontakte,social-youtube,sort-alpha-asc,sort-alpha-desc,sort-amount-asc,sort-amount-desc,sort-numeric-asc,sort-numeric-desc,speech,speedometer,star,start,support,symble-female,symbol-male,table,tablet,tag,target,task,text-center,text-left,text-middle,text-right,trash,trophy,tumblr,twitter,umbrella,unfollow,unlock,user-female,user-follow,user-following,user-unfollow,user,vector,video,volume-1,volume-2,volume-off,wallet,windows,wrench,yen,youtube|}')",
+            "    ->method('${3:method}'),"
         ],
         "description": "Creates a new Button field"
     },
     "Link-field.sublime-snippet": {
         "prefix": "Link::make",
         "body": [
-            "Link::make('__(${1:link-title})')",
-            "   ->route('${2:link-route}');"
+            "Link::make('__(${1:name})')",
+            "    ->icon('${2|action-redo,action-undo,actual-size,anchor,android,arrow-down-circle,arrow-down,arrow-left-circle,arrow-left,arrow-right-circle,arrow-right,arrow-up-circle,arrow-up,badge,bag,ban,bar-chart,barcode,basket-loaded,basket,bell,bitcoin,bold,book-open,briefcase,browser,brush,bubble,bubbles,bug,building,bulb,calculator-alt,calculator,calendar,call-end,call-in,call-out,camera,camrecorder,chart,check,chemistry,circle,circle_thin,clock,close,cloud-download,cloud-upload,code,compass,config,control-end,control-forward,control-pause,control-play,control-rewind,control-start,controller,copyright,credit-card,crome,crop,cross,cup,cursor-move,cursor,cut,database,diamond,direction,directions,disc,dislike,doc,docs,dollar,drawer,dribbble,drop,dropbox,earphones-alt,earphones,edge,emotsmile,energy,envelope-letter,envelope-open,envelope,equalizer,euro,event,exclamation,eye,eyeglasses,facebook,feed,female-user,film,filter,fingerprint,fire,firefox,flag,folder-alt,folder,font,frame,friends,full-screen,game-controller,ghost,globe-alt,globe,graduation,graph,grid,handbag,headphones-microphone,headphones,heart,help,history,home,hourglass,ie,info,italic,key,layers,left,like,link,linux,lira,list,loading,location-pin,lock-open,lock,login,logout,loop,mac,macos,magic-wand,magnet,magnifier-add,magnifier-remove,magnifier,map,menu,microphone,minus,module,modules,money,monitor,mouse,moustache,move,music-tone-alt,music-tone,mustache,new-doc,note,notebook,number-list,open,options-vertical,options,orchid-old,orchid,organization,os,paper-clip,paper-plane,paste,paypal,pencil,people,phone,photo,picture,pie-chart,pin,plane,playlist,plus-alt,plus,pointer,pound,power,present,printer,puzzle,question,quote,refresh,reload,right,rocket,rub,rupee,safari,save-alt,save,screen-desktop,screen-smartphone,screen-tablet,server,settings,share-alt,share,shekel,shield,shuffle,size-actual,size-fullscreen,social-behance,social-dribbble,social-dropbox,social-facebook,social-foursqare,social-github,social-google,social-instagram,social-linkedin,social-pintarest,social-reddit,social-skype,social-soundcloud,social-spotify,social-steam,social-stumbleupon,social-tumblr,social-twitter,social-vkontakte,social-youtube,sort-alpha-asc,sort-alpha-desc,sort-amount-asc,sort-amount-desc,sort-numeric-asc,sort-numeric-desc,speech,speedometer,star,start,support,symble-female,symbol-male,table,tablet,tag,target,task,text-center,text-left,text-middle,text-right,trash,trophy,tumblr,twitter,umbrella,unfollow,unlock,user-female,user-follow,user-following,user-unfollow,user,vector,video,volume-1,volume-2,volume-off,wallet,windows,wrench,yen,youtube|}')",
+            "    ->route('${3:route}'),"
         ],
         "description": "Creates a new Link field"
     },
@@ -186,59 +200,59 @@
         "prefix": "DropDown::make",
         "body": [
             "DropDown::make()",
-            "   ->icon('${1:dropdown-icon}')",
-            "   ->list([",
-            "       $2",
-            "   ]);"
+            "    ->icon('${1:icon}')",
+            "    ->list([",
+            "        $2",
+            "    ]),"
         ],
         "description": "Creates a new DropDown field"
     },
     "NumberRange-field.sublime-snippet": {
         "prefix": "NumberRange::make",
         "body": [
-            "NumberRange::make();"
+            "NumberRange::make(),"
         ],
         "description": "Creates a new NumberRange field"
     },
     "Menu-field.sublime-snippet": {
         "prefix": "Menu::make",
         "body": [
-            "Menu::make('${1:menu-name}')",
-            "   ->title('${2:menu-title}')",
-            "   ->route('${3:menu-route}')",
-            "   ->icon('${4:menu-icon}')",
-            "   ->permission('${5:menu.permission}'),",
+            "Menu::make('${1:name}')",
+            "    ->icon('${2|action-redo,action-undo,actual-size,anchor,android,arrow-down-circle,arrow-down,arrow-left-circle,arrow-left,arrow-right-circle,arrow-right,arrow-up-circle,arrow-up,badge,bag,ban,bar-chart,barcode,basket-loaded,basket,bell,bitcoin,bold,book-open,briefcase,browser,brush,bubble,bubbles,bug,building,bulb,calculator-alt,calculator,calendar,call-end,call-in,call-out,camera,camrecorder,chart,check,chemistry,circle,circle_thin,clock,close,cloud-download,cloud-upload,code,compass,config,control-end,control-forward,control-pause,control-play,control-rewind,control-start,controller,copyright,credit-card,crome,crop,cross,cup,cursor-move,cursor,cut,database,diamond,direction,directions,disc,dislike,doc,docs,dollar,drawer,dribbble,drop,dropbox,earphones-alt,earphones,edge,emotsmile,energy,envelope-letter,envelope-open,envelope,equalizer,euro,event,exclamation,eye,eyeglasses,facebook,feed,female-user,film,filter,fingerprint,fire,firefox,flag,folder-alt,folder,font,frame,friends,full-screen,game-controller,ghost,globe-alt,globe,graduation,graph,grid,handbag,headphones-microphone,headphones,heart,help,history,home,hourglass,ie,info,italic,key,layers,left,like,link,linux,lira,list,loading,location-pin,lock-open,lock,login,logout,loop,mac,macos,magic-wand,magnet,magnifier-add,magnifier-remove,magnifier,map,menu,microphone,minus,module,modules,money,monitor,mouse,moustache,move,music-tone-alt,music-tone,mustache,new-doc,note,notebook,number-list,open,options-vertical,options,orchid-old,orchid,organization,os,paper-clip,paper-plane,paste,paypal,pencil,people,phone,photo,picture,pie-chart,pin,plane,playlist,plus-alt,plus,pointer,pound,power,present,printer,puzzle,question,quote,refresh,reload,right,rocket,rub,rupee,safari,save-alt,save,screen-desktop,screen-smartphone,screen-tablet,server,settings,share-alt,share,shekel,shield,shuffle,size-actual,size-fullscreen,social-behance,social-dribbble,social-dropbox,social-facebook,social-foursqare,social-github,social-google,social-instagram,social-linkedin,social-pintarest,social-reddit,social-skype,social-soundcloud,social-spotify,social-steam,social-stumbleupon,social-tumblr,social-twitter,social-vkontakte,social-youtube,sort-alpha-asc,sort-alpha-desc,sort-amount-asc,sort-amount-desc,sort-numeric-asc,sort-numeric-desc,speech,speedometer,star,start,support,symble-female,symbol-male,table,tablet,tag,target,task,text-center,text-left,text-middle,text-right,trash,trophy,tumblr,twitter,umbrella,unfollow,unlock,user-female,user-follow,user-following,user-unfollow,user,vector,video,volume-1,volume-2,volume-off,wallet,windows,wrench,yen,youtube|}')",
+            "    ->title(__('${3:title}'))",
+            "    ->route('${4:route}')",
+            "    ->permission('${5:permission}'),",
         ],
         "description": "Creates a new Menu field"
     },
     "Alert-notification.sublime-snippet": {
         "prefix": "Alert::message",
         "body": [
-            "Alert::message('${1:alert-message}'); // available styles: info, success, error, warning"
+            "Alert::${1|info,success,error,warning|}('${2:message}');"
         ],
         "description": "Creates a new Alert nofitification"
     },
     "Toast-notification.sublime-snippet": {
         "prefix": "Toast::message",
         "body": [
-            "Toast::message('${1:toast-message}'); // available styles: info, success, error, warning"
+            "Toast::${1|info,success,error,warning|}('${2:message}');"
         ],
         "description": "Creates a new Toast nofitification"
     },
     "TD-component.sublime-snippet": {
         "prefix": "TD::make",
         "body": [
-            "TD::make('${1:model-field}', __('${2:table-title}')),"
+            "TD::make('${1:name}', __('${2:title}')),"
         ],
         "description": "Creates a new TD component"
     },
     "ModalToggle-component.sublime-snippet": {
         "prefix": "ModalToggle::make",
         "body": [
-            "ModalToggle::make(__('${1:modal-title}'))",
-            "   ->modal('${2:modal-id}')",
-            "   ->method('${3:modal-method}')",
-            "   ->icon('${4:modal-icon}')"
+            "ModalToggle::make(__('${1:title}'))",
+            "    ->icon('${2|action-redo,action-undo,actual-size,anchor,android,arrow-down-circle,arrow-down,arrow-left-circle,arrow-left,arrow-right-circle,arrow-right,arrow-up-circle,arrow-up,badge,bag,ban,bar-chart,barcode,basket-loaded,basket,bell,bitcoin,bold,book-open,briefcase,browser,brush,bubble,bubbles,bug,building,bulb,calculator-alt,calculator,calendar,call-end,call-in,call-out,camera,camrecorder,chart,check,chemistry,circle,circle_thin,clock,close,cloud-download,cloud-upload,code,compass,config,control-end,control-forward,control-pause,control-play,control-rewind,control-start,controller,copyright,credit-card,crome,crop,cross,cup,cursor-move,cursor,cut,database,diamond,direction,directions,disc,dislike,doc,docs,dollar,drawer,dribbble,drop,dropbox,earphones-alt,earphones,edge,emotsmile,energy,envelope-letter,envelope-open,envelope,equalizer,euro,event,exclamation,eye,eyeglasses,facebook,feed,female-user,film,filter,fingerprint,fire,firefox,flag,folder-alt,folder,font,frame,friends,full-screen,game-controller,ghost,globe-alt,globe,graduation,graph,grid,handbag,headphones-microphone,headphones,heart,help,history,home,hourglass,ie,info,italic,key,layers,left,like,link,linux,lira,list,loading,location-pin,lock-open,lock,login,logout,loop,mac,macos,magic-wand,magnet,magnifier-add,magnifier-remove,magnifier,map,menu,microphone,minus,module,modules,money,monitor,mouse,moustache,move,music-tone-alt,music-tone,mustache,new-doc,note,notebook,number-list,open,options-vertical,options,orchid-old,orchid,organization,os,paper-clip,paper-plane,paste,paypal,pencil,people,phone,photo,picture,pie-chart,pin,plane,playlist,plus-alt,plus,pointer,pound,power,present,printer,puzzle,question,quote,refresh,reload,right,rocket,rub,rupee,safari,save-alt,save,screen-desktop,screen-smartphone,screen-tablet,server,settings,share-alt,share,shekel,shield,shuffle,size-actual,size-fullscreen,social-behance,social-dribbble,social-dropbox,social-facebook,social-foursqare,social-github,social-google,social-instagram,social-linkedin,social-pintarest,social-reddit,social-skype,social-soundcloud,social-spotify,social-steam,social-stumbleupon,social-tumblr,social-twitter,social-vkontakte,social-youtube,sort-alpha-asc,sort-alpha-desc,sort-amount-asc,sort-amount-desc,sort-numeric-asc,sort-numeric-desc,speech,speedometer,star,start,support,symble-female,symbol-male,table,tablet,tag,target,task,text-center,text-left,text-middle,text-right,trash,trophy,tumblr,twitter,umbrella,unfollow,unlock,user-female,user-follow,user-following,user-unfollow,user,vector,video,volume-1,volume-2,volume-off,wallet,windows,wrench,yen,youtube|}')",
+            "    ->modal('${3:id}')",
+            "    ->method('${4:method}'),",
         ],
         "description": "Creates a new ModalToggle component"
     }
