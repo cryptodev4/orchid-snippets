@@ -6,45 +6,69 @@ This Orchid Snippets extensions will help you to create in the fastest way Orchi
 
 This package contains snippets for below Orchid components:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/0L1ushj"  ><a href="//imgur.com/a/0L1ushj">Orchid Relation field</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+### **Relation field**
+<img src="https://imgur.com/J30ic53.gif" width="500"/>
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/YZfiSsf"  ><a href="//imgur.com/a/YZfiSsf">Orchid Input field</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+### **Input field**
+<img src="https://imgur.com/yI01XFD.gif"/>
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/FZXQZ04"  ><a href="//imgur.com/a/FZXQZ04">Orchid Route screen</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+### **Route screen**
+<img src="https://imgur.com/jDkzU7S.gif"/>
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/e5oIyU6"  ><a href="//imgur.com/a/e5oIyU6">Orchid Route crud</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+### **Route crud**
+<img src="https://imgur.com/Xw5sl81.gif"/>
 
-- $allowedFilters array
-- $allowedSorts array
-- Route::screen
-- Input::make
-- TextArea::make
-- CheckBox::make
-- Select::make
-- Relation::make
-- DateTimer::make
-- DateRange::make
-- TimeZone::make
-- Quill::make
-- SimpleMDE::make
-- Matrix::make
-- Code::make
-- Picture::make
-- Cropper::make
-- Upload::make
-- Group::make
-- Button::make
-- Link::make
-- DropDown::make
-- NumberRange::make
-- Menu::make
-- Alert::message
-- Toast::message
-- TD::make
-- ModalToggle::make
-- Route::crud is a custom snippet to create two base routes for an Orchid Crud, (the url of ListScreen should be in plural to avoid Orchid error).
+### Orchid Snippets hierachy
 
-The package also adds support for all the Orchid icons in the components with icons.
+1. Model Level
+    * $allowedFilters array
+    * $allowedSorts array
+2. Navigation Level
+    * Menu::make
+3. Routing Level
+    * Route::screen
+    * Route::crud (this snippet creates 2 base routes for Orchid crud, P.D. the list screen route should be in plural to avoid errors).
+4. Layout Level
+    * Layout::rows
+    * Layout::columns
+    * Layout::table
+    * Layout::legend
+    * Layout::modal
+    * Layout::tabs
+    * Layout::accordion
+    * Layout::view
+    * Layout::wrapper
+    * Layout::brosing
+    * Sight::make
+5. Screen Component Level
+    * Input::make
+    * TextArea::make
+    * CheckBox::make
+    * Select::make
+    * Relation::make
+    * DateTimer::make
+    * DateRange::make
+    * TimeZone::make
+    * Quill::make
+    * SimpleMDE::make
+    * Matrix::make
+    * Code::make
+    * Picture::make
+    * Cropper::make
+    * Upload::make
+    * Group::make
+    * DropDown::make
+    * NumberRange::make
+    * ModalToggle::make
+    * TD::make
+6. Action Level
+    * Link::make
+    * Button::make
+7. Notification Level
+    * Alert::message
+    * Toast::message
+
+The package also adds support for the Orchid icons in the components with icons.
 
 [Orchid Icons](https://orchid.software/en/docs/icons/)
 

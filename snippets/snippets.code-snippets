@@ -17,6 +17,99 @@
         ],
         "description": "Creates allowed sorts array"
     },
+    "Layout-rows.sublime-snippet": {
+        "prefix": "Layout::rows",
+        "body": [
+            "Layout::rows([",
+            "    ${1}",
+            "]),"
+        ],
+        "description": "Creates a new Layout rows wrapper"
+    },
+    "Layout-columns.sublime-snippet": {
+        "prefix": "Layout::columns",
+        "body": [
+            "Layout::columns([",
+            "    ${1}",
+            "]),"
+        ],
+        "description": "Creates a new Layout columns wrapper"
+    },
+    "Layout-table.sublime-snippet": {
+        "prefix": "Layout::table",
+        "body": [
+            "Layout::table('${1}', [",
+            "    ${2}",
+            "]),"
+        ],
+        "description": "Creates a new Layout table wrapper"
+    },
+    "Layout-legend.sublime-snippet": {
+        "prefix": "Layout::legend",
+        "body": [
+            "Layout::legend('${1}', [",
+            "    ${2}",
+            "]),"
+        ],
+        "description": "Creates a new Layout legend wrapper"
+    },
+    "Layout-modal.sublime-snippet": {
+        "prefix": "Layout::modal",
+        "body": [
+            "Layout::modal('${1}', [",
+            "    ${2}",
+            "]),"
+        ],
+        "description": "Creates a new Layout modal wrapper"
+    },
+    "Layout-tabs.sublime-snippet": {
+        "prefix": "Layout::tabs",
+        "body": [
+            "Layout::tabs([",
+            "    ${1}",
+            "]),"
+        ],
+        "description": "Creates a new Layout tabs wrapper"
+    },
+    "Layout-accordion.sublime-snippet": {
+        "prefix": "Layout::accordion",
+        "body": [
+            "Layout::accordion([",
+            "    ${1}",
+            "]),"
+        ],
+        "description": "Creates a new Layout accordion wrapper"
+    },
+    "Layout-view.sublime-snippet": {
+        "prefix": "Layout::view",
+        "body": [
+            "Layout::view('${1}'),",
+        ],
+        "description": "Creates a new Layout view wrapper"
+    },
+    "Layout-wrapper.sublime-snippet": {
+        "prefix": "Layout::wrapper",
+        "body": [
+            "Layout::wrapper('${1}', [",
+            "    ${2}",
+            "]),"
+        ],
+        "description": "Creates a new Layout wrapper"
+    },
+    "Layout-browsing.sublime-snippet": {
+        "prefix": "Layout::browsing",
+        "body": [
+            "Layout::browsing('${1}'),",
+        ],
+        "description": "Creates a new Layout browsing wrapper"
+    },
+    "Sight-field.sublime-snippet": {
+        "prefix": "Sight::make",
+        "body": [
+            "Sight::make('${1}'),",
+        ],
+        "description": "Creates a new Sight field"
+    },
     "Route-crud.sublime-snippet": {
         "prefix": "Route::crud",
         "body": [
@@ -181,7 +274,7 @@
     "Button-field.sublime-snippet": {
         "prefix": "Button::make",
         "body": [
-            "Button::make('__(${1:name})')",
+            "Button::make(__('${1:name}'))",
             "    ->icon('${2|action-redo,action-undo,actual-size,anchor,android,arrow-down-circle,arrow-down,arrow-left-circle,arrow-left,arrow-right-circle,arrow-right,arrow-up-circle,arrow-up,badge,bag,ban,bar-chart,barcode,basket-loaded,basket,bell,bitcoin,bold,book-open,briefcase,browser,brush,bubble,bubbles,bug,building,bulb,calculator-alt,calculator,calendar,call-end,call-in,call-out,camera,camrecorder,chart,check,chemistry,circle,circle_thin,clock,close,cloud-download,cloud-upload,code,compass,config,control-end,control-forward,control-pause,control-play,control-rewind,control-start,controller,copyright,credit-card,crome,crop,cross,cup,cursor-move,cursor,cut,database,diamond,direction,directions,disc,dislike,doc,docs,dollar,drawer,dribbble,drop,dropbox,earphones-alt,earphones,edge,emotsmile,energy,envelope-letter,envelope-open,envelope,equalizer,euro,event,exclamation,eye,eyeglasses,facebook,feed,female-user,film,filter,fingerprint,fire,firefox,flag,folder-alt,folder,font,frame,friends,full-screen,game-controller,ghost,globe-alt,globe,graduation,graph,grid,handbag,headphones-microphone,headphones,heart,help,history,home,hourglass,ie,info,italic,key,layers,left,like,link,linux,lira,list,loading,location-pin,lock-open,lock,login,logout,loop,mac,macos,magic-wand,magnet,magnifier-add,magnifier-remove,magnifier,map,menu,microphone,minus,module,modules,money,monitor,mouse,moustache,move,music-tone-alt,music-tone,mustache,new-doc,note,notebook,number-list,open,options-vertical,options,orchid-old,orchid,organization,os,paper-clip,paper-plane,paste,paypal,pencil,people,phone,photo,picture,pie-chart,pin,plane,playlist,plus-alt,plus,pointer,pound,power,present,printer,puzzle,question,quote,refresh,reload,right,rocket,rub,rupee,safari,save-alt,save,screen-desktop,screen-smartphone,screen-tablet,server,settings,share-alt,share,shekel,shield,shuffle,size-actual,size-fullscreen,social-behance,social-dribbble,social-dropbox,social-facebook,social-foursqare,social-github,social-google,social-instagram,social-linkedin,social-pintarest,social-reddit,social-skype,social-soundcloud,social-spotify,social-steam,social-stumbleupon,social-tumblr,social-twitter,social-vkontakte,social-youtube,sort-alpha-asc,sort-alpha-desc,sort-amount-asc,sort-amount-desc,sort-numeric-asc,sort-numeric-desc,speech,speedometer,star,start,support,symble-female,symbol-male,table,tablet,tag,target,task,text-center,text-left,text-middle,text-right,trash,trophy,tumblr,twitter,umbrella,unfollow,unlock,user-female,user-follow,user-following,user-unfollow,user,vector,video,volume-1,volume-2,volume-off,wallet,windows,wrench,yen,youtube|}')",
             "    ->method('${3:method}'),"
         ],
@@ -190,7 +283,7 @@
     "Link-field.sublime-snippet": {
         "prefix": "Link::make",
         "body": [
-            "Link::make('__(${1:name})')",
+            "Link::make(__('${1:name}'))",
             "    ->icon('${2|action-redo,action-undo,actual-size,anchor,android,arrow-down-circle,arrow-down,arrow-left-circle,arrow-left,arrow-right-circle,arrow-right,arrow-up-circle,arrow-up,badge,bag,ban,bar-chart,barcode,basket-loaded,basket,bell,bitcoin,bold,book-open,briefcase,browser,brush,bubble,bubbles,bug,building,bulb,calculator-alt,calculator,calendar,call-end,call-in,call-out,camera,camrecorder,chart,check,chemistry,circle,circle_thin,clock,close,cloud-download,cloud-upload,code,compass,config,control-end,control-forward,control-pause,control-play,control-rewind,control-start,controller,copyright,credit-card,crome,crop,cross,cup,cursor-move,cursor,cut,database,diamond,direction,directions,disc,dislike,doc,docs,dollar,drawer,dribbble,drop,dropbox,earphones-alt,earphones,edge,emotsmile,energy,envelope-letter,envelope-open,envelope,equalizer,euro,event,exclamation,eye,eyeglasses,facebook,feed,female-user,film,filter,fingerprint,fire,firefox,flag,folder-alt,folder,font,frame,friends,full-screen,game-controller,ghost,globe-alt,globe,graduation,graph,grid,handbag,headphones-microphone,headphones,heart,help,history,home,hourglass,ie,info,italic,key,layers,left,like,link,linux,lira,list,loading,location-pin,lock-open,lock,login,logout,loop,mac,macos,magic-wand,magnet,magnifier-add,magnifier-remove,magnifier,map,menu,microphone,minus,module,modules,money,monitor,mouse,moustache,move,music-tone-alt,music-tone,mustache,new-doc,note,notebook,number-list,open,options-vertical,options,orchid-old,orchid,organization,os,paper-clip,paper-plane,paste,paypal,pencil,people,phone,photo,picture,pie-chart,pin,plane,playlist,plus-alt,plus,pointer,pound,power,present,printer,puzzle,question,quote,refresh,reload,right,rocket,rub,rupee,safari,save-alt,save,screen-desktop,screen-smartphone,screen-tablet,server,settings,share-alt,share,shekel,shield,shuffle,size-actual,size-fullscreen,social-behance,social-dribbble,social-dropbox,social-facebook,social-foursqare,social-github,social-google,social-instagram,social-linkedin,social-pintarest,social-reddit,social-skype,social-soundcloud,social-spotify,social-steam,social-stumbleupon,social-tumblr,social-twitter,social-vkontakte,social-youtube,sort-alpha-asc,sort-alpha-desc,sort-amount-asc,sort-amount-desc,sort-numeric-asc,sort-numeric-desc,speech,speedometer,star,start,support,symble-female,symbol-male,table,tablet,tag,target,task,text-center,text-left,text-middle,text-right,trash,trophy,tumblr,twitter,umbrella,unfollow,unlock,user-female,user-follow,user-following,user-unfollow,user,vector,video,volume-1,volume-2,volume-off,wallet,windows,wrench,yen,youtube|}')",
             "    ->route('${3:route}'),"
         ],
@@ -255,5 +348,13 @@
             "    ->method('${4:method}'),",
         ],
         "description": "Creates a new ModalToggle component"
-    }
+    },
+    "Map-component.sublime-snippet": {
+        "prefix": "Map::make",
+        "body": [
+            "Map::make('${1:name}')",
+            "    ->value(['lat' => '${2:latitude}', 'lng' => '${3:longitude}']),"
+        ],
+        "description": "Creates a new Map component"
+    },
 }
