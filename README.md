@@ -1,13 +1,13 @@
-# Orchid Snippets
+# **Orchid Snippets**
 
-This Orchid Snippets extensions will help you to create in the fastest way Orchid components
+Orchid Snippets for rapid development with Orchid Platform.
 
-## Features
+## **Features**
 
 This package contains snippets for below Orchid components:
 
 ### **Relation field**
-<img src="https://imgur.com/J30ic53.gif" width="500"/>
+<img src="https://imgur.com/J30ic53.gif"/>
 
 ### **Input field**
 <img src="https://imgur.com/yI01XFD.gif"/>
@@ -18,7 +18,10 @@ This package contains snippets for below Orchid components:
 ### **Route crud**
 <img src="https://imgur.com/Xw5sl81.gif"/>
 
-### Orchid Snippets hierachy
+### **Button component**
+<img src="https://imgur.com/R5qSQPA.gif"/>
+
+### **Orchid Snippets hierachy**
 
 1. Model Level
     * $allowedFilters array
@@ -68,7 +71,12 @@ This package contains snippets for below Orchid components:
     * Alert::message
     * Toast::message
 
-The package also adds support for the Orchid icons in the components with icons.
+This package also supports Orchid icons in the components with icon method.
+
+[Orchid Platform](https://orchid.software/)
 
 [Orchid Icons](https://orchid.software/en/docs/icons/)
 
+[Orchid CRUD](https://orchid.software/en/docs/packages/crud/)
+
+[Orchid Fortify](https://github.com/orchidsoftware/fortify)
